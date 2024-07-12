@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/Sem\ título\ \(1\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 800px;
+    width: 28%;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+.login-container img{
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto; /* Para manter a proporção */
+    display: block; /* Remove espaços extras ao redor da imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+#logo{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+.login-container h1 {
+    font-family: Lucida Console", "Courier New", monospace";
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.login-container h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.login-container p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.login-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-container input:hover{
+    border-color: #1e67b9;
+}
+.login-container input option:hover{
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 12px;
+    width: 60%;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn1 {
+    background-color: #298bf5;
+}
+
+#btn1:hover {
+    background-color: #0056b3;
+}
+
+#btn2 {
+    background-color: transparent;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+#btn2:hover {
+    background-color: rgba(16, 121, 233, 0.205);
+}
