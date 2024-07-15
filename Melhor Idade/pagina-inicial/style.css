@@ -39,11 +39,29 @@ header {
     color: #FFF;
     border: 2px solid #333;
     padding: 10px 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
-
+.exit{
+    background: #408ce4;
+    color: #FFF;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url(img/sair\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 17px;
+}
+.butons{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
 main {
     text-align: center;
     margin-bottom: 10px;
