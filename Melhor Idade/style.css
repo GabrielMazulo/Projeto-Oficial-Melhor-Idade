@@ -1,97 +1,98 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url(img/Sem\ título\ \(1\).png);
+    background-image: url(img/background-login.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header .logo-title img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bnv p {
+    font-size: 1.5rem;
+    margin: 5px 0px;
+    color: white;
+    text-align: center;
 }
 
 .login-container {
-    background-color: rgba(255, 255, 255, 0.5);
-    max-width: 800px;
-    width: 28%;
-    margin: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 16px;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.911);
+    max-width: 90vw;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    padding: 45px 18px 20px 18px;
+    border-radius: 22px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
-}
-.login-container img{
-    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
-    height: auto; /* Para manter a proporção */
-    display: block; /* Remove espaços extras ao redor da imagem */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
-#logo{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-}
-.login-container h1 {
-    font-family: Lucida Console", "Courier New", monospace";
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.login-container h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 20px 0px 20px 0px;
 }
 
-.login-container p {
-    text-align: center;
-    margin-bottom: 10px;
+.login-container legend {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align:left; 
 }
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    gap: 5px;
-}
-
-.login-container label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.login-container input[type="email"],
+.login-container input[type="email"], 
 .login-container input[type="password"] {
-    padding: 10px;
+    padding: 8px 40px;
+    width: calc(90% - 45px);
+    height: 30px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: left 8px center;
 }
 
-.login-container input:hover{
+.login-container input[type="email"] {
+    background-image: url(img/mail.png);
+}
+
+.login-container input[type="password"] {
+    background-image: url(img/lock.png);
+}
+
+.login-container input:hover {
     border-color: #1e67b9;
 }
-.login-container input option:hover{
-    background-color: #f2f2f2;
+
+.butons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
 }
 
 .btn {
-    display: flex;
     text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+    display: block;
+    text-align: center;
     padding: 12px;
-    width: 60%;
+    width: 90%;
+    max-width: 180px;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -112,4 +113,43 @@ body {
 
 #btn2:hover {
     background-color: rgba(16, 121, 233, 0.205);
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-container p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .bnv p {
+        font-size: 1.2rem;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-container legend {
+        font-size: 1.2rem;
+    }
+
+    .login-container input[type="email"], 
+    .login-container input[type="password"] {
+        height: 35px;
+        padding: 8px 40px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
 }

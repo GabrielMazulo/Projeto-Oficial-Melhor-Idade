@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Idade</title>
+    <style>
+        body {
+            font-family: url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+            margin: 0;
+            padding: 0;
+            background-image: url(img/Sem\ título\ \(1\).png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1px 15px;
+        }
+
+        .logo-title {
+            display: flex;
+            padding: 10px 10px;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 8px;
+            height: 70px;
+            margin-right: 5px;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        .profile-button {
+            background: #408ce4;
+            color: #FFF;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .exit {
+            background: #408ce4;
+            color: #FFF;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-image: url(img/sair\ \(1\).png);
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 17px;
+        }
+
+        .butons {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+
+        .quote {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            margin-right: 220px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #FFF;
+        }
+
+        .search-container {
+            margin-bottom: 50px;
+        }
+
+        .search-input {
+            width: 38%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="img/logo-melhor-idade-2.png" alt="logo">
+            <div class="title">Melhor Idade</div>
+        </div>
+        <p class="quote">Persista sempre, pois cada passo é uma conquista rumo aos seus sonhos</p>
+        <div class="butons">
+            <button class="profile-button">Meu Peril</button>
+            <button type="submit" id="btn-sair" class="exit">Sair</button>
+        </div>
+    </header>
+    <main>
+
+        <div class="search-container">
+            <input type="text" placeholder="Pesquise aqui" class="search-input">
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="img/mulher.jpg" alt="Alongamentos">
+                <div class="card-title">ALONGAMENTOS</div>
+            </div>
+            <div class="card">
+                <img src="img/jogos.jpg" alt="Jogos">
+                <div class="card-title">JOGOS</div>
+            </div>
+            <div class="card">
+                <img src="img/curso.jpg" alt="Cursos">
+                <div class="card-title">CURSOS</div>
+            </div>
+            <div class="card">
+                <img src="img/forum.jpg" alt="Fórum">
+                <div class="card-title">FÓRUM</div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('btn-sair').addEventListener('click', function(){
+            window.location.href = './index.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(img/background-login.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            margin: 0;
+        }
+
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        header .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 1px;
+        }
+
+        header .logo-title img {
+            max-width: 150px;
+            /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .bnv p {
+            font-size: 1.5rem;
+            margin: 10px 0px 18px 0px;
+            color: white;
+            text-align: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.911);
+            max-width: 90vh;
+            width: 28%;
+            margin-bottom: 60px;
+            padding: 45px 30px 45px 30px;
+            border-radius: 22px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+
+        #logo {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+        }
+
+
+        .login-container p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .login-container form {
+            display: flex;
+            font-size: 20px;
+            flex-direction: column;
+            padding-top: 10px;
+            gap: 15px;
+        }
+
+        .login-container label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .login-container input[type="email"] {
+            padding: 10px 10px 10px 40px;
+            width: 87%;
+            height: 25px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-image: url(img/mail.png);
+            background-repeat: no-repeat;
+            background-position: left 8px center;
+        }
+
+        .login-container input[type="password"] {
+            padding: 10px 10px 10px 40px;
+            width: 87%;
+            height: 25px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-image: url(img/lock.png);
+            background-repeat: no-repeat;
+            background-position: left 8px center;
+        }
+
+        .login-container input:hover {
+            border-color: #1e67b9;
+
+        }
+
+        .login-container input option:hover {
+            background-color: #f2f2f2;
+        }
+
+        .butons {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-right: 2px;
+            margin-left: 2px
+        }
+
+        .btn {
+            display: flex;
+            text-decoration: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 1px 0px 4px;
+
+            padding: 12px;
+            width: 40%;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #btn1 {
+            background-color: #298bf5;
+
+        }
+
+        #btn1:hover {
+            background-color: #0056b3;
+        }
+
+        #btn2 {
+            background-color: transparent;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        #btn2:hover {
+            background-color: rgba(16, 121, 233, 0.205);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-title">
+        <img src="img/logologin.png" alt="logo">
+
+    </div>
+    </header>
+    <div class="bnv">
+        <p>Registre-se ao melhor idade</p>
+    </div>
+    <div class="login-container">
+
+        <form action="login">
+            
+            <input type="email" id="email" name="email" placeholder="E-mail">
+            <input type="password" id="senha" name="senha" placeholder="Senha">
+        </form>
+        <div class="butons">
+            
+            <a href="inicio.html" class="btn" id="btn2">Registre-se</a>
+        </div>
+        
+
+
+        <script>function mostrarAlerta(message, type) {
+                const alertBox = document.createElement('div');
+                alertBox.textContent = message;
+
+                // Adiciona classes para estilo
+                alertBox.classList.add('custom-alert', type, 'show');
+
+                // Insere a caixa de alerta no início do corpo do documento
+                document.body.insertBefore(alertBox, document.body.firstChild);
+
+                // Remove a caixa de alerta após 3 segundos
+                setTimeout(() => {
+                    alertBox.remove();
+                }, 3000);
+            }
+
+            document.getElementById('questionnaire-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const terms = document.getElementById('terms');
+                if (!terms.checked) {
+                    mostrarAlerta('Você deve aceitar os termos e condições.', 'error');
+                    return;
+                }
+
+                // Validação simples dos campos
+                const fields = ['name', 'age', 'gender', 'hypertension', 'diabetes', 'memory_issues', 'high_cholesterol'];
+                let valid = true;
+
+                fields.forEach(function (field) {
+                    const element = document.getElementById(field);
+                    if (!element.value) {
+                        mostrarAlerta('Por favor, preencha todos os campos.', 'error');
+                        valid = false;
+                        return;
+                    }
+                });
+
+                if (valid) {
+                    mostrarAlerta('Formulário enviado com sucesso!', 'success');
+                    // Aqui você pode adicionar código para enviar os dados do formulário para o servidor
+                    window.location.href = './inicio.html';
+                }
+            });</script>
+</body>
+
+</html>
