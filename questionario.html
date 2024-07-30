@@ -16,7 +16,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 110vh;
+            height: 100vh;
             margin: 0;
         }
 
@@ -55,8 +55,8 @@
 
         .login-container {
             background-color: rgba(255, 255, 255, 0.911);
-            max-width: 90vh;
-            width: 28%;
+            max-width: 80vh;
+            width: 25%;
             margin-bottom: 60px;
             padding: 45px 30px 45px 30px;
             border-radius: 22px;
@@ -89,10 +89,22 @@
             margin-bottom: 8px;
             font-weight: bold;
         }
+        .login-container input[type="name"] {
+            padding: 10px 10px 10px 40px;
+            width: 85%;
+            height: 25px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            background-image: url(img/user.png);
+            background-repeat: no-repeat;
+            background-position: left 8px center;
+        }
 
         .login-container input[type="email"] {
             padding: 10px 10px 10px 40px;
-            width: 87%;
+            width: 85%;
             height: 25px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -105,7 +117,7 @@
 
         .login-container input[type="password"] {
             padding: 10px 10px 10px 40px;
-            width: 87%;
+            width: 85%;
             height: 25px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -125,26 +137,24 @@
             background-color: #f2f2f2;
         }
 
-        .butons {
+        .buton{
             display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            flex-direction: row;
-            margin-right: 2px;
-            margin-left: 2px
+            
+            justify-content: center;
+            align-items:center;
+            
         }
 
         .btn {
             display: flex;
             text-decoration: none;
-            flex-direction: row;
+            background-color: #0056b3;
             justify-content: center;
             align-items: center;
             margin: 10px 1px 0px 4px;
-
             padding: 12px;
             width: 40%;
-            color: #fff;
+            color: white;
             border: none;
             border-radius: 6px;
             font-size: 1rem;
@@ -160,15 +170,15 @@
             background-color: #0056b3;
         }
 
-        #btn2 {
+        #btn1 {
             background-color: transparent;
             text-decoration: none;
             color: #007bff;
             border: 1px solid #007bff;
         }
 
-        #btn2:hover {
-            background-color: rgba(16, 121, 233, 0.205);
+        #btn1:hover {
+            background-color:   rgba(16, 121, 233, 0.5);
         }
     </style>
 </head>
@@ -185,15 +195,17 @@
     <div class="login-container">
 
         <form action="login">
-            
+
+            <input type="name" id="name" name="name" placeholder="Digite seu nome">
             <input type="email" id="email" name="email" placeholder="E-mail">
             <input type="password" id="senha" name="senha" placeholder="Senha">
+            <input type="password" id="senha" name="senha" placeholder="Confirme sua senha">
         </form>
-        <div class="butons">
-            
+        <div class="buton">
+
             <a href="inicio.html" class="btn" id="btn2">Registre-se</a>
         </div>
-        
+
 
 
         <script>function mostrarAlerta(message, type) {
