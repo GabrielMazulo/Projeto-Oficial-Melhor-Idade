@@ -36,7 +36,7 @@ header .logo-title img {
     background-color: rgba(255, 255, 255, 0.911);
     max-width: 90vw;
     width: 90%;
-    max-width: 450px;
+    max-width: 430px;
     max-height: 90%;
     padding: 45px 18px 20px 18px;
     border-radius: 22px;
@@ -78,7 +78,7 @@ header .logo-title img {
 .butons {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 32px;
     align-items: center;
 }
 
@@ -88,7 +88,7 @@ header .logo-title img {
     text-align: center;
     padding: 12px;
     width: 90%;
-    max-width: 180px;
+    max-width: 170px;
     color: #fff;
     border: none;
     border-radius: 6px;
